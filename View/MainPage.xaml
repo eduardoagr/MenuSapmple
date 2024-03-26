@@ -10,7 +10,7 @@
 
     <Grid RowDefinitions="200, *">
         <HorizontalStackLayout>
-            <controls:MenuTemplate SectionName="ferwqfkrew">
+            <controls:MenuTemplate SectionName="ferwqfkrew" x:Name="YourMainTemplate">
                 <controls:MenuTemplate.MenuItems>
                     <models:MenuComponentItems Command="{Binding MenuItemSelectedCommand}"
                         ImageSource="dotnet_bot.png" />
