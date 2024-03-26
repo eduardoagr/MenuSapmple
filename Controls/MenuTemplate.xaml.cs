@@ -24,10 +24,14 @@ public partial class MenuTemplate : ContentView {
         set => SetValue(SectionNameProperty, value);
     }
 
-    private void UpdateMenu() {
+    public void UpdateMenu() {
+
         MenuItemsStack.Children.Clear();
 
         foreach (var menuItem in MenuItems) {
+            
+            menuItem.BindingContext = BindingContext;
+            
             var imageButton = new ImageButton {
                 Source = menuItem.ImageSource,
                 WidthRequest = 60,
